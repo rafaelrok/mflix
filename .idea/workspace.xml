@@ -4,11 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cea7204-5ad0-4670-8608-28aef2199a8d" name="Changes" comment="" />
+    <list default="true" id="1cea7204-5ad0-4670-8608-28aef2199a8d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/Migrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/Migrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/ApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/MovieController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/AbstractMFlixDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/AbstractMFlixDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/IncorrectDaoOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/IncorrectDaoOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDocumentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDocumentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/AbstractMovie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/AbstractMovie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Credentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/Credentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Critic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/Critic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/IMDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/IMDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/MovieTitle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/MovieTitle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/RottenTomatoes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/RottenTomatoes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/Session.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/UserPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/UserPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/UserRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/UserRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/ViewerRating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/models/ViewerRating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/security/JWTAuthEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/security/JWTAuthEntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/security/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/security/JWTAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/MoviesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/MoviesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/TokenAuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/TokenAuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/config/MongoDBConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/config/MongoDBConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/config/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/config/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/config/WebSecurityConfig.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -27,19 +70,33 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/workspace/mflix&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;941f9562f044af4706f2794bd6cc1fef&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/workspace/mflix",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "spring.configuration.checksum": "941f9562f044af4706f2794bd6cc1fef"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="mflix" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="mflix.Application" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -58,10 +115,26 @@
       <workItem from="1663549489363" duration="149000" />
       <workItem from="1663558556513" duration="606000" />
       <workItem from="1663630046755" duration="624000" />
+      <workItem from="1663640354252" duration="1154000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
