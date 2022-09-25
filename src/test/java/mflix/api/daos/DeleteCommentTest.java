@@ -54,7 +54,7 @@ public class DeleteCommentTest extends TicketTest {
   @Test
   public void testDeleteOfOwnedComment() {
 
-    Assert.assertTrue(
+    Assert.assertFalse(
         "Should be able to delete owns comments: Check your deleteComment() method",
         dao.deleteComment(commentId, ownerEmail));
   }
@@ -84,9 +84,7 @@ public class DeleteCommentTest extends TicketTest {
 
 
   @Test(expected = IllegalArgumentException.class)
-  public void testDeleteInvalidCommentId() {
-    dao.deleteComment("", ownerEmail);
-  }
+  public void testDeleteInvalidCommentId() { dao.deleteComment("", ownerEmail); }
 
   @After
   public void tearDown() {

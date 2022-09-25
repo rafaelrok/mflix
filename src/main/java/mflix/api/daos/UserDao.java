@@ -27,6 +27,9 @@ import java.util.Map;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
+/**
+ * @author rafae
+ */
 @Configuration
 public class UserDao extends AbstractMFlixDao {
 
@@ -84,7 +87,7 @@ public class UserDao extends AbstractMFlixDao {
     }
 
     /**
-     * Returns the User object matching the an email string value.
+     * Returns the User object matching the email string value.
      *
      * @param email - email string to be matched.
      * @return User object or null.
@@ -127,7 +130,7 @@ public class UserDao extends AbstractMFlixDao {
     }
 
     /**
-     * Updates the preferences of an user identified by `email` parameter.
+     * Updates the preferences of a user identified by `email` parameter.
      *
      * @param email           - user to be updated email
      * @param userPreferences - set of preferences that should be stored and replace the existing

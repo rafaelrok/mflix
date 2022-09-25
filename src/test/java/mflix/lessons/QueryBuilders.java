@@ -88,7 +88,7 @@ public class QueryBuilders extends AbstractLesson {
   }
 
   /**
-   * I'd argue the query is much cleaner. Filters contains all of the operators you may be used to.
+   * I'd argue the query is much cleaner. Filter contains all the operators you may be used to.
    * Let's issue a query with multiple predicates.
    *
    * <p>We'll find all movies where Tom Hanks is a cast member, released after 1990 but before 2005,

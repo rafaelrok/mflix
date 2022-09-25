@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -35,7 +36,7 @@ public class MovieDao extends AbstractMFlixDao {
     }
 
     /**
-     * movieId needs to be a hexadecimal string value. Otherwise it won't be possible to translate to
+     * movieId needs to be a hexadecimal string value. Otherwise, it won't be possible to translate to
      * an ObjectID
      *
      * @param movieId - Movie object identifier
@@ -117,17 +118,19 @@ public class MovieDao extends AbstractMFlixDao {
      * @return List of matching Document objects.
      */
     public List<Document> getMoviesByCountry(String... country) {
-
-        Bson queryFilter = new Document();
-        Bson projection = new Document();
+        Bson queryFilter = new Document("countries", new Document("$in", Arrays.asList(country)));
+        Bson projection = new Document("title", 1);
         //TODO> Ticket: Projection - implement the query and projection required by the unit test
         List<Document> movies = new ArrayList<>();
-
+        moviesCollection
+                .find(queryFilter)
+                .projection(projection)
+                .into(movies);
         return movies;
     }
 
     /**
-     * This method will execute the following mongo shell query: db.movies.find({"$text": { "$search":
+     * This method will execute the following mongo she'll query: db.movies.find({"$text": { "$search":
      * `keywords` }}, {"score": {"$meta": "textScore"}}).sort({"score": {"$meta": "textScore"}})
      *
      * @param limit    - integer value of number of documents to be limited to.
@@ -178,7 +181,7 @@ public class MovieDao extends AbstractMFlixDao {
     }
 
     /**
-     * Finds all movies that match the provide `genres`, sorted descending by the `sortKey` field.
+     * Finds all movies that match to provide `genres`, sorted descending by the `sortKey` field.
      *
      * @param sortKey - sorting key string.
      * @param limit   - number of documents to be returned.
@@ -233,19 +236,19 @@ public class MovieDao extends AbstractMFlixDao {
         return Aggregates.bucket("$runtime", runtimeBoundaries(), bucketOptions);
     }
 
-    /*
-    This method is the java implementation of the following mongo shell aggregation pipeline
-    {
-     "$bucket": {
-       "groupBy": "$metacritic",
-       "boundaries": [0, 50, 70, 90, 100],
-       "default": "other",
-       "output": {
-       "count": {"$sum": 1}
-       }
-      }
-     }
-     */
+    /**
+    *This method is the java implementation of the following mongo shell aggregation pipeline
+    *{
+     *"$bucket": {
+       *"groupBy": "$metacritic",
+       *"boundaries": [0, 50, 70, 90, 100],
+       *"default": "other",
+       *"output": {
+       *"count": {"$sum": 1}
+       *}
+      *}
+     *}
+     **/
     private Bson buildRatingBucketStage() {
         BucketOptions bucketOptions = new BucketOptions();
         bucketOptions.defaultBucket("other");
@@ -299,7 +302,7 @@ public class MovieDao extends AbstractMFlixDao {
     /**
      * Counts the total amount of documents in the `movies` collection
      *
-     * @return number of documents in the movies collection.
+     * @return number of documents in the movies' collection.
      */
     public long getMoviesCount() {
         return this.moviesCollection.countDocuments();
@@ -318,7 +321,7 @@ public class MovieDao extends AbstractMFlixDao {
     /**
      * Counts the number of documents matched by this cast elements
      *
-     * @param cast - cast string vargs.
+     * @param cast - cast string vars.
      * @return number of matching documents.
      */
     public long getCastSearchCount(String... cast) {
@@ -328,7 +331,7 @@ public class MovieDao extends AbstractMFlixDao {
     /**
      * Counts the number of documents match genres filter.
      *
-     * @param genres - genres string vargs.
+     * @param genres - genres string vars.
      * @return number of matching documents.
      */
     public long getGenresSearchCount(String... genres) {
