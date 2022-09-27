@@ -165,8 +165,8 @@ public class MovieDao extends AbstractMFlixDao {
      * @return List of documents sorted by sortKey that match the cast selector.
      */
     public List<Document> getMoviesByCast(String sortKey, int limit, int skip, String... cast) {
-        Bson castFilter = null;
-        Bson sort = null;
+        Bson castFilter = Filters.in("cast", cast);;
+        Bson sort = Sorts.descending(sortKey);
         //TODO> Ticket: Subfield Text Search - implement the expected cast
         // filter and sort
         List<Document> movies = new ArrayList<>();
@@ -186,7 +186,7 @@ public class MovieDao extends AbstractMFlixDao {
      * @param sortKey - sorting key string.
      * @param limit   - number of documents to be returned.
      * @param skip    - number of documents to be skipped
-     * @param genres  - genres matching string vargs.
+     * @param genres  - genres matching string vars.
      * @return List of matching Document objects.
      */
     public List<Document> getMoviesByGenre(String sortKey, int limit, int skip, String... genres) {
@@ -194,11 +194,13 @@ public class MovieDao extends AbstractMFlixDao {
         Bson castFilter = Filters.in("genres", genres);
         // sort key
         Bson sort = Sorts.descending(sortKey);
+
         List<Document> movies = new ArrayList<>();
         // TODO > Ticket: Paging - implement the necessary cursor methods to support simple
         // pagination like skip and limit in the code below
-        moviesCollection.find(castFilter).sort(sort).iterator()
-        .forEachRemaining(movies::add);
+        moviesCollection.find(castFilter).sort(sort).skip(skip).limit(limit)
+                .iterator()
+                .forEachRemaining(movies::add);
         return movies;
     }
 
@@ -279,6 +281,10 @@ public class MovieDao extends AbstractMFlixDao {
         // Your job is to order the stages correctly in the pipeline.
         // Starting with the `matchStage` add the remaining stages.
         pipeline.add(matchStage);
+        pipeline.add(sortStage);
+        pipeline.add(skipStage);
+        pipeline.add(limitStage);
+        pipeline.add(facetStage);
 
         moviesCollection.aggregate(pipeline).iterator().forEachRemaining(movies::add);
         return movies;

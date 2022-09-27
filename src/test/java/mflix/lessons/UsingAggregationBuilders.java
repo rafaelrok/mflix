@@ -57,11 +57,11 @@ public class UsingAggregationBuilders extends AbstractLesson {
     that expresses the aggregation stage, you should use Aggregates builder
     class.
 
-    com.mongodb.client.model.Aggregates provides a set of syntactic sugar
+    com.mongodb.client.model.Aggregate provides a set of syntactic sugar
     class builders and methods for each of the support aggregation stages.
     Although we can build any aggregation stage by appending Document or
     Bson objects with the respective expressions, Aggregates allows for a
-     more concise stage build up, with less typing.
+    more concise stage build up, with less typing.
 
     The match() method takes as argument a filter expression, similar to
     the ones we would use in the case of find() command.
@@ -82,7 +82,7 @@ public class UsingAggregationBuilders extends AbstractLesson {
     /*
     As a result of the aggregate() method, we get back an
     AggregateIterable. Similar to other iterables, this object allows us
-     to iterate over the result set.
+    to iterate over the result set.
     */
 
     // collect all movies into an array list
@@ -99,7 +99,7 @@ public class UsingAggregationBuilders extends AbstractLesson {
   public void aggregateSeveralStages() {
     /*
     A single aggregation pipeline, and in particular a $match stage,
-    could be achieve by using the find() command. So let's use something
+    could be achieved by using the find() command. So let's use something
     a bit more interesting, which is exactly what we should be using the
     aggregation framework for.
      */
@@ -110,7 +110,7 @@ public class UsingAggregationBuilders extends AbstractLesson {
     For all movies produced in Portugal, sum the number of times
     a particular cast member gets to visit such a lovely place. How
     many times has an individual cast member, participated in a movie
-    produced in this country. And ofcourse, let's not forget to return the
+    produced in this country. And of course, let's not forget to return the
     results sorted Ascending regarding the number of gigs.
     In the mongo shell this question would be answered by the following
     aggregation:
@@ -145,8 +145,8 @@ public class UsingAggregationBuilders extends AbstractLesson {
     Group operations are in place to do some sort of accumulation
     operation.
     Operations like $sum, $avg, $min, $max ... are good candidates to be
-    used along side group operations, and there is a java builder for that.
-    @see com.mongodb.client.model.Accumulators handles all accumulation
+    used alongside group operations, and there is a java builder for that.
+    @see com.mongodb.client.model.Accumulator handles all accumulation
     operations.
      */
 
@@ -226,25 +226,25 @@ public class UsingAggregationBuilders extends AbstractLesson {
     more complex than others, in terms of type of operation and
     parameters they may take to operate.
     Ex: a $lookup stage is takes a fair more amount of parameters/options
-     to execute than a $addFields stage
-     {
+    to execute than a $addFields stage
+    {
         $lookup: {
             from: "collection_name",
             pipeline: [{}] - sub-pipeline
             let: {...} - expression
             as: "field_name" - output array field name
         }
-     }
+    }
 
-     vs
+    vs
 
-     {
+    {
         $addFields: {
             "new_field": {expression} - expression that computes field value
-           }
-     }
+      }
+    }
 
-     */
+    */
 
     List<Bson> pipeline = new ArrayList<>();
 
@@ -253,8 +253,22 @@ public class UsingAggregationBuilders extends AbstractLesson {
     - create facets of the movie documents that where produced in Portugal
     - facet on cast_members: list of cast members that are found in the
     movies produced in Portugal
-    - facet on genres_count: list of genres and it's count
+    - facet on genres_count: list of genres, and it's count
     - facet on year_bucket: matching movies year bucket
+
+    db.movies.aggregate([
+        {$match: {countries: "Portugal"}},
+        {$facet: {
+            cast_members: [{$unwind: "$cast"}, {$sortByCount: "$cast"}],
+            genres_count: [{$unwind: "$genres"}, {$sortByCount: "$genres"}],
+            year_bucket: [
+                {$bucketAuto: {
+                    groupBy: "$year",
+                    buckets: 10
+                }}
+            ]
+        }}
+    ])
 
     For each facet we are going to create a com.mongodb.client.Facet object.
      */
@@ -331,8 +345,7 @@ public class UsingAggregationBuilders extends AbstractLesson {
   - Use the driver Aggregates builder class to compose the different stages
   - Use Accumulators, Sorts and Filters builders to compose the different
   stages expressions
-  - Complex aggregation stages can imply several different sub-pipelines
+  - Complex aggregation stages can imply several sub-pipelines
   and stage arguments.
    */
-
 }

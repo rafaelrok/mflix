@@ -87,10 +87,10 @@ public class UsingPojoLesson extends AbstractLesson {
     actorDocument2.append("num_movies", 63);
 
     /* Great! We now have two Document Objects with data, that are
-     * ready to be written to the actors collection.
+     * ready to be written to the actors' collection.
      * For that we create an array of documents
-     * and append both Bruce and Natalie to that array. Finally we can use
-     * the insertMany method to add both documents to the actors database.
+     * and append both Bruce and Natalie to that array. Finally, we can use
+     * the insertMany method to add both documents to the actors' database.
      */
 
     List<Document> listOfActors = new ArrayList<>();

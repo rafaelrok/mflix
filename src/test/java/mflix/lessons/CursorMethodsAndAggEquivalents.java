@@ -48,7 +48,7 @@ public class CursorMethodsAndAggEquivalents extends AbstractLesson {
   public void setUp() {
     /*
      * Before we get started, looking into our cursor methods and aggregation
-     * stages, I'm going to create a 100 documents in dummy collection.
+     * stages, I'm going to create 100 documents in dummy collection.
      */
     List<Document> documents = new ArrayList<>();
     for (int i = 0; i < 1000; i++) {
@@ -197,12 +197,12 @@ public class CursorMethodsAndAggEquivalents extends AbstractLesson {
      * The cursor batch size determines the number of documents to be
      * returned in one cursor batch. If our query hits 1M elements you may
      * not want to wait till all of those elements are returned to start
-     * processing the result set. Therefore each time we open a cursor or
+     * processing the result set. Therefore, each time we open a cursor or
      * iterable, the results are sent back to the application in smaller
      * batches, hence the cursor batchSize.
      */
 
-    // By default the Java driver will set a batchSize of 0. Which means the
+    // By default, the Java driver will set a batchSize of 0. Which means the
     // driver will use the server defined batchSize, which by default is 101
     // documents. However, you can define your own batchSize for a find
     // operation.
@@ -215,7 +215,7 @@ public class CursorMethodsAndAggEquivalents extends AbstractLesson {
     Iterable<Document> limitedBatched = sortable.find().limit(10).batchSize(10);
 
     /*
-     * This would be similar to running this mongo shell command:
+     * This would be similar to running this mongo she'll command:
      * <p>
      *     db.sortable.find().limit(10).batchSize(10)
      * </p>
@@ -255,7 +255,7 @@ public class CursorMethodsAndAggEquivalents extends AbstractLesson {
   public void testFindLimitAndAggLimitStage() {
 
     // Let's start with limit.
-    // Using our movies dataset, we can run the following query:
+    // Using our movies' dataset, we can run the following query:
     // db.movies.find({directors: "Sam Raimi"}).limit(2)
     Bson qFilter = Filters.eq("directors", "Sam Raimi");
     Iterable limitCursor = moviesCollection.find(qFilter).limit(2);
@@ -356,7 +356,7 @@ public class CursorMethodsAndAggEquivalents extends AbstractLesson {
     List<Bson> pipeline = new ArrayList<>();
     pipeline.add(matchStage);
     pipeline.add(skipStage);
-    // send all of the results into a list
+    // send all the results into a list
     List<Document> skipAggList = new ArrayList<>();
     moviesCollection.aggregate(pipeline).into(skipAggList);
 
@@ -424,7 +424,7 @@ public class CursorMethodsAndAggEquivalents extends AbstractLesson {
     // after running the aggregation pipeline
     moviesCollection.aggregate(correctPipeline).into(aggregationList);
 
-    // we get the same result set in both mechanims
+    // we get the same result set in both mechanisms
 
     Assert.assertEquals(findList, aggregationList);
   }

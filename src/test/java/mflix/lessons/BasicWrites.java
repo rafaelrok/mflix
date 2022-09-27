@@ -70,9 +70,9 @@ public class BasicWrites extends AbstractLesson {
      * the error. In later lessons, we will look into which kind of
      * exceptions we should be prepared to handled and what causes such
      * exceptions.
-     * Otherwise, everything get's correctly written and the document is
+     * Otherwise, everything gets correctly written and the document is
      * stored in the database.
-     * However, the avid MongoDB expert in you is wondering, where can we
+     * However, the avid MongoDB expert in you is wondering where can we
      * see the _id field? We did not set one, so surely it would still
      * need to be set. And you are right.
      */
@@ -142,7 +142,7 @@ public class BasicWrites extends AbstractLesson {
   @Test
   public void testUpsertDocument() {
     /*
-     * There are times where we are not sure if a document already exists
+     * There are times when we are not sure if a document already exists
      * in the collection, and we just want to update it if it already
      * exists. Something like with "update" or "insert" if it does not
      * exist. Well, MongoDB allows for that in a very straightforward way.
@@ -160,7 +160,7 @@ public class BasicWrites extends AbstractLesson {
     // We set a query predicate that finds the video game based on his title
     Bson query = new Document("title", "Final Fantasy");
 
-    // And we try to updated. If we do not provide the upsert flag
+    // And we try to update. If we do not provide the upsert flag
     UpdateResult resultNoUpsert = videoGames.updateOne(query, new Document("$set", doc1));
 
     // if the document does not exist, the number of matched documents
@@ -187,12 +187,12 @@ public class BasicWrites extends AbstractLesson {
 
     // Another component of the update or insert, upsert, is that we can
     // set values just in case we are inserting.
-    // Let's say we want add a field called, just_inserted, if the
-    // document did not existed before, but do not set it if the document
+    // Let's say we want to add a field called, just_inserted, if the
+    // document did not exist before, but do not set it if the document
     // already existed
 
     // let's try to update "Final Fantasy", which already exists:
-    // we need to setup an object that defines the update operation,
+    // we need to set up an object that defines the update operation,
     // set's the title and appends the field just_inserted with string "yes"
     Bson updateObj1 =
         Updates.combine(
