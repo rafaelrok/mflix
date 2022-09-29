@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: mflix.api.daos.UserPreferencesTest
+Test set: mflix.lessons.UpdateOperators
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.473 s - in mflix.api.daos.UserPreferencesTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.356 s - in mflix.lessons.UpdateOperators

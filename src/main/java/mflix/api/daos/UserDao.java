@@ -70,7 +70,7 @@ public class UserDao extends AbstractMFlixDao {
             usersCollection.withWriteConcern(WriteConcern.MAJORITY).insertOne(user);
         } catch (MongoException e) {
             log.error("An error ocurred while trying to insert a User.");
-            if (ErrorCategory.fromErrorCode( e.getCode() ) == ErrorCategory.DUPLICATE_KEY) {
+            if (ErrorCategory.fromErrorCode(e.getCode()) == ErrorCategory.DUPLICATE_KEY) {
                 throw new IncorrectDaoOperation("The User is already in the database.");
             }
             return false;
@@ -96,7 +96,7 @@ public class UserDao extends AbstractMFlixDao {
         session.setJwt(jwt);
 
         try {
-            if (Optional.ofNullable(sessionsCollection.find( eq("user_id", userId) ).first()).isPresent()) {
+            if (Optional.ofNullable(sessionsCollection.find(eq("user_id", userId)).first()).isPresent()) {
                 sessionsCollection.updateOne(eq("user_id", userId), set("jwt", jwt));
             } else {
                 sessionsCollection.insertOne(session);
@@ -179,6 +179,16 @@ public class UserDao extends AbstractMFlixDao {
         // be updated.
         //TODO > Ticket: Handling Errors - make this method more robust by
         // handling potential exceptions when updating an entry.
-        return false;
+        try {
+            usersCollection
+                    .updateOne(eq("email", email), set("preferences",
+                                    Optional.ofNullable(userPreferences).orElseThrow(() ->
+                                            new IncorrectDaoOperation("user preferences cannot be null"))));
+        } catch (MongoException e) {
+            log.error("An error occurred while trying to update User preferences.");
+            return false;
+        }
+
+        return true;
     }
 }

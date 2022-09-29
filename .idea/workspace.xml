@@ -6,23 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1cea7204-5ad0-4670-8608-28aef2199a8d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mflix/lessons/BasicWrites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mflix/lessons/BasicWrites.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mflix/lessons/CursorMethodsAndAggEquivalents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mflix/lessons/CursorMethodsAndAggEquivalents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mflix/lessons/UsingAggregationBuilders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mflix/lessons/UsingAggregationBuilders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mflix/lessons/UsingPojoLesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mflix/lessons/UsingPojoLesson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mflix/lessons/utils/ActorBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mflix/lessons/utils/ActorBasic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mflix/lessons/UpdateOperators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mflix/lessons/UpdateOperators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-mflix.api.daos.FacetedSearchTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-mflix.api.daos.FacetedSearchTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-mflix.api.daos.TextAndSubfieldTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-mflix.api.daos.TextAndSubfieldTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mflix.api.daos.FacetedSearchTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/mflix.api.daos.FacetedSearchTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mflix.api.daos.TextAndSubfieldTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/mflix.api.daos.TextAndSubfieldTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/UsingAggregationBuilders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/UsingAggregationBuilders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/lessons/utils/ActorBasic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/lessons/utils/ActorBasic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-mflix.api.daos.UserPreferencesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-mflix.api.daos.UserPreferencesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mflix.api.daos.UserPreferencesTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/mflix.api.daos.UserPreferencesTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +202,9 @@
       <workItem from="1664146429193" duration="1198000" />
       <workItem from="1664189119097" duration="165000" />
       <workItem from="1664189309262" duration="8033000" />
-      <workItem from="1664277279041" duration="10248000" />
+      <workItem from="1664277279041" duration="13962000" />
+      <workItem from="1664362296229" duration="1790000" />
+      <workItem from="1664449805716" duration="633000" />
     </task>
     <servers />
   </component>

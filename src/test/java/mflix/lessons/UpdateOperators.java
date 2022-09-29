@@ -18,7 +18,7 @@ import static com.mongodb.client.model.Updates.*;
 
 /**
  * Hello! In this lesson we are going to talk about Update operators. Imagine a scenario where you
- * are have a database of your favorite artists and you are trying to keep up with the public
+ * are have a database of your favorite artists, and you are trying to keep up with the public
  * opinion about them, so you periodically update the rating of your favorite musicians to match
  * their public rating.
  */
@@ -70,9 +70,9 @@ public class UpdateOperators extends AbstractLesson {
   }
 
   /* You may have noticed that by some coincidence the name of the band
-   * Gorillaz was mis-spelled with an extra z at the end. We would definitely
+   * Gorillaz was misspelled with an extra z at the end. We would definitely
    * like to fix that right away and replace that value with a proper
-   * spelling. There is a method that allows us to replace a Document and
+   * spelling. There is a method that allows us to replace a Document, and
    * it is called replaceOne. Here is an example of how to use it.
    */
 
