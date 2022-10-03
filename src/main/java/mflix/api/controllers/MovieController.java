@@ -1,6 +1,6 @@
 package mflix.api.controllers;
 
-import mflix.api.models.Movie;
+import mflix.api.daos.models.Movie;
 import mflix.api.services.MoviesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -54,7 +54,7 @@ public class DeleteCommentTest extends TicketTest {
   @Test
   public void testDeleteOfOwnedComment() {
 
-    Assert.assertFalse(
+    Assert.assertTrue(
         "Should be able to delete owns comments: Check your deleteComment() method",
         dao.deleteComment(commentId, ownerEmail));
   }

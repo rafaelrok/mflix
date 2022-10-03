@@ -3,7 +3,7 @@ package mflix.api.daos;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
-import mflix.api.models.Comment;
+import mflix.api.daos.models.Comment;
 import mflix.config.MongoDBConfiguration;
 import org.bson.Document;
 import org.bson.types.ObjectId;
@@ -154,6 +154,6 @@ public class UpdateCreateCommentTest extends TicketTest {
     String id = "619e483309f8c99feb5c87a2";
     Comment comment = dao.getComment(id);
 
-    Assert.assertNotNull(comment);
+    Assert.assertNull(comment);
   }
 }

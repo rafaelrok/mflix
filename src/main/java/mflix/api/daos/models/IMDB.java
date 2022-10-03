@@ -1,4 +1,4 @@
-package mflix.api.models;
+package mflix.api.daos.models;
 
 public class IMDB {
 

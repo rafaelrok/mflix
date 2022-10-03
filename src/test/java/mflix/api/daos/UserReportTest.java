@@ -1,7 +1,7 @@
 package mflix.api.daos;
 
 import com.mongodb.client.MongoClient;
-import mflix.api.models.Critic;
+import mflix.api.daos.models.Critic;
 import mflix.config.MongoDBConfiguration;
 import org.junit.Assert;
 import org.junit.Before;

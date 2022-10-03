@@ -1,5 +1,6 @@
 package mflix.api.daos;
 
+import mflix.api.daos.models.*;
 import mflix.api.models.*;
 import org.bson.Document;
 import org.bson.conversions.Bson;

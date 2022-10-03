@@ -1,7 +1,7 @@
 package mflix.api.daos;
 
 import com.mongodb.client.MongoClient;
-import mflix.api.models.User;
+import mflix.api.daos.models.User;
 import mflix.config.MongoDBConfiguration;
 import org.bson.Document;
 import org.junit.After;

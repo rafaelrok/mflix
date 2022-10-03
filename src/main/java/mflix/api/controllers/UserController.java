@@ -1,8 +1,8 @@
 package mflix.api.controllers;
 
-import mflix.api.models.Login;
-import mflix.api.models.User;
-import mflix.api.models.UserRegistry;
+import mflix.api.daos.models.Login;
+import mflix.api.daos.models.User;
+import mflix.api.daos.models.UserRegistry;
 import mflix.api.services.MoviesService;
 import mflix.api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

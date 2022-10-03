@@ -2,7 +2,7 @@ package mflix.api.services;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import mflix.api.models.UserPrincipal;
+import mflix.api.daos.models.UserPrincipal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,4 +1,4 @@
-package mflix.api.models;
+package mflix.api.daos.models;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;

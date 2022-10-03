@@ -2,9 +2,9 @@ package mflix.api.services;
 
 import mflix.api.daos.IncorrectDaoOperation;
 import mflix.api.daos.UserDao;
-import mflix.api.models.User;
-import mflix.api.models.UserPrincipal;
-import mflix.api.models.UserRegistry;
+import mflix.api.daos.models.User;
+import mflix.api.daos.models.UserPrincipal;
+import mflix.api.daos.models.UserRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

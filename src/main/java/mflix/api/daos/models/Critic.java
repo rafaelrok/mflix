@@ -1,4 +1,4 @@
-package mflix.api.models;
+package mflix.api.daos.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.bson.codecs.pojo.annotations.BsonProperty;

@@ -1,18 +1,15 @@
 package mflix.api.daos;
 
 import com.mongodb.MongoClientSettings;
-import com.mongodb.MongoWriteException;
+import com.mongodb.MongoException;
 import com.mongodb.ReadConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.model.Aggregates;
-import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.Sorts;
-import com.mongodb.client.model.Updates;
+import com.mongodb.client.model.*;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
-import mflix.api.models.Comment;
-import mflix.api.models.Critic;
+import mflix.api.daos.models.Comment;
+import mflix.api.daos.models.Critic;
 import org.bson.Document;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
@@ -24,11 +21,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.text.MessageFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
+import static com.mongodb.client.model.Filters.and;
+import static com.mongodb.client.model.Filters.eq;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
@@ -81,12 +79,23 @@ public class CommentDao extends AbstractMFlixDao {
         // comment.
         // TODO> Ticket - Handling Errors: Implement a try catch block to
         // handle a potential write exception when given a wrong commentId.
-        return null;
+        if (comment.getId() == null) {
+            throw new IncorrectDaoOperation("id null");
+        }
+        try {
+            commentCollection.insertOne(comment);
+        }
+        catch (Exception ex) {
+            throw new IncorrectDaoOperation(ex.getMessage(), ex);
+        }
+
+        return comment;
     }
+
 
     /**
      * Updates the comment text matching commentId and user email. This method would be equivalent to
-     * running the following mongo shell command:
+     * running the following mongo she'll command:
      *
      * <p>db.comments.update({_id: commentId}, {$set: { "text": text, date: ISODate() }})
      *
@@ -103,7 +112,15 @@ public class CommentDao extends AbstractMFlixDao {
         // user own comments
         // TODO> Ticket - Handling Errors: Implement a try catch block to
         // handle a potential write exception when given a wrong commentId.
-        return false;
+        Document queryFilter = new Document("_id", new ObjectId(commentId)).append("email", email);
+        UpdateResult res = commentCollection.updateOne(
+                queryFilter,
+                Updates.combine(
+                        Updates.set("text", text),
+                        Updates.set("email", email)
+                ));
+
+        return res.getModifiedCount() > 0;
     }
 
     /**
@@ -117,9 +134,24 @@ public class CommentDao extends AbstractMFlixDao {
         // TODO> Ticket Delete Comments - Implement the method that enables the deletion of a user
         // comment
         // TIP: make sure to match only users that own the given commentId
+        if(!Optional.ofNullable(commentId).isPresent()) {
+            throw new IncorrectDaoOperation("commentId null");
+        }
+        DeleteResult deleteResult = null;
+
         // TODO> Ticket Handling Errors - Implement a try catch block to
         // handle a potential write exception when given a wrong commentId.
-        return false;
+        try{
+            deleteResult = commentCollection.deleteOne(
+                    and(eq("_id", new ObjectId(commentId)),
+                            eq("email", email)
+                    ));
+        }
+        catch (MongoException me) {
+            log.error("delete Comment error", me);
+        }
+        assert deleteResult != null;
+        return deleteResult.getDeletedCount() > 0;
     }
 
     /**
@@ -137,6 +169,19 @@ public class CommentDao extends AbstractMFlixDao {
         // // guarantee for the returned documents. Once a commenter is in the
         // // top 20 of users, they become a Critic, so mostActive is composed of
         // // Critic objects.
+        List<Bson> pipeline = new ArrayList<>();
+        pipeline.add(Aggregates.group("$email", Accumulators.sum("count", 1)));
+        pipeline.add(Aggregates.sort(Sorts.descending("count")));
+        pipeline.add(Aggregates.limit(20));
+
+        MongoCollection<Critic> criticCollection = db.getCollection(COMMENT_COLLECTION, Critic.class)
+                .withCodecRegistry(pojoCodecRegistry)
+                .withReadConcern(ReadConcern.MAJORITY);
+
+        for(Critic critic : criticCollection.aggregate(pipeline)) {
+            mostActive.add(critic);
+        }
+
         return mostActive;
     }
 }
