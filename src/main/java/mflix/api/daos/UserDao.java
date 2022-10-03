@@ -30,7 +30,7 @@ public class UserDao extends AbstractMFlixDao {
 
     private final MongoCollection<User> usersCollection;
     //TODO> Ticket: User Management - do the necessary changes so that the sessions collection
-    //returns a Session object
+
     private final MongoCollection<Session> sessionsCollection;
 
     private final Logger log;

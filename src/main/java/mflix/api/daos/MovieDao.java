@@ -1,5 +1,6 @@
 package mflix.api.daos;
 
+import com.mongodb.MongoWriteException;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.*;
@@ -46,6 +47,11 @@ public class MovieDao extends AbstractMFlixDao {
         //TODO> Ticket: Handling Errors - implement a way to catch a
         //any potential exceptions thrown while validating a movie id.
         //Check out this method's use in the method that follows.
+        try {
+            new ObjectId(movieId);
+        } catch (MongoWriteException e) {
+            return false;
+        }
         return true;
     }
 

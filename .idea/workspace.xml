@@ -5,47 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cea7204-5ad0-4670-8608-28aef2199a8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/mflix_Web_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDocumentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDocumentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/config/MongoDBConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/config/MongoDBConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/CommentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDocumentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/MovieDocumentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/daos/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/AbstractMovie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Credentials.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Critic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/IMDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/MovieTitle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/RottenTomatoes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/Session.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/UserPrincipal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/UserRegistry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/models/ViewerRating.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/MoviesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/MoviesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/TokenAuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/TokenAuthenticationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/api/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/api/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mflix/config/MongoDBConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/config/MongoDBConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-mflix.api.daos.MigrationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-mflix.api.daos.MigrationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mflix.api.daos.MigrationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/mflix.api.daos.MigrationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/HandlingErrorsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/HandlingErrorsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UpdateCreateCommentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UpdateCreateCommentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UserPreferencesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UserPreferencesTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UserReportTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UserReportTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mflix/api/daos/UserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/CommentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +209,7 @@
       <workItem from="1664754774072" duration="621000" />
       <workItem from="1664755772668" duration="2537000" />
       <workItem from="1664794843557" duration="4764000" />
-      <workItem from="1664801400505" duration="2827000" />
+      <workItem from="1664801400505" duration="3511000" />
     </task>
     <servers />
   </component>

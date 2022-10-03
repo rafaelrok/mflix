@@ -2,6 +2,7 @@ package mflix.api.daos;
 
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoException;
+import com.mongodb.MongoWriteException;
 import com.mongodb.ReadConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
@@ -85,7 +86,7 @@ public class CommentDao extends AbstractMFlixDao {
         try {
             commentCollection.insertOne(comment);
         }
-        catch (Exception ex) {
+        catch (MongoWriteException ex) {
             throw new IncorrectDaoOperation(ex.getMessage(), ex);
         }
 
@@ -112,15 +113,18 @@ public class CommentDao extends AbstractMFlixDao {
         // user own comments
         // TODO> Ticket - Handling Errors: Implement a try catch block to
         // handle a potential write exception when given a wrong commentId.
-        Document queryFilter = new Document("_id", new ObjectId(commentId)).append("email", email);
-        UpdateResult res = commentCollection.updateOne(
-                queryFilter,
-                Updates.combine(
-                        Updates.set("text", text),
-                        Updates.set("email", email)
-                ));
-
-        return res.getModifiedCount() > 0;
+        try{
+            Document queryFilter = new Document("_id", new ObjectId(commentId)).append("email", email);
+            UpdateResult res = commentCollection.updateOne(
+                    queryFilter,
+                    Updates.combine(
+                            Updates.set("text", text),
+                            Updates.set("email", email)
+                    ));
+            return res.getModifiedCount() > 0;
+        }catch (MongoWriteException ex) {
+            throw new IncorrectDaoOperation(ex.getMessage(), ex);
+        }
     }
 
     /**
