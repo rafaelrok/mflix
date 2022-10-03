@@ -17,6 +17,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author rafae
+ */
 @SuppressWarnings("unchecked")
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/user")
