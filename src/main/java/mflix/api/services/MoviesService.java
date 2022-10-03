@@ -49,7 +49,7 @@ public class MoviesService {
     }
 
     /**
-     * Checks the a field type class name for a given movie.
+     * Checks the field type class name for a given movie.
      *
      * @param movieId  - movie identifier
      * @param fieldKey - document field name.

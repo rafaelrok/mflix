@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cea7204-5ad0-4670-8608-28aef2199a8d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/CommentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/services/MoviesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/services/MoviesService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +207,7 @@
       <workItem from="1664754774072" duration="621000" />
       <workItem from="1664755772668" duration="2537000" />
       <workItem from="1664794843557" duration="4764000" />
-      <workItem from="1664801400505" duration="3511000" />
+      <workItem from="1664801400505" duration="3787000" />
     </task>
     <servers />
   </component>
