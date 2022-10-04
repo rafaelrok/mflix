@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cea7204-5ad0-4670-8608-28aef2199a8d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/daos/MovieDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/api/services/MoviesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/api/services/MoviesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/config/MongoDBConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/config/MongoDBConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mflix/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mflix/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/build/static/css/main.d2c98b4b.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/build/static/css/main.d2c98b4b.chunk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/build/static/css/main.d2c98b4b.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/build/static/css/main.d2c98b4b.chunk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/build/static/js/main.02d67aeb.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/build/static/js/main.02d67aeb.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/config/MongoDBConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/config/MongoDBConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mflix/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mflix/config/WebSecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +216,8 @@
       <workItem from="1664754774072" duration="621000" />
       <workItem from="1664755772668" duration="2537000" />
       <workItem from="1664794843557" duration="4764000" />
-      <workItem from="1664801400505" duration="3787000" />
+      <workItem from="1664801400505" duration="6269000" />
+      <workItem from="1664877746397" duration="6835000" />
     </task>
     <servers />
   </component>

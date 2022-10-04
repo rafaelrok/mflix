@@ -416,7 +416,7 @@
                             }, u.a.createElement(_.a, {className: r.buttonStyle}, n.info.name)) : u.a.createElement(A.a, {
                                 to: "/signup",
                                 style: {textDecoration: "none"}
-                            }, u.a.createElement(_.a, {className: r.buttonStyle}, "sign up")),
+                            }, u.a.createElement(_.a, {className: r.buttonSave}, "sign up")),
                             o = n.loggedIn && n.info.isAdmin && u.a.createElement(A.a, {
                                 to: "/admin",
                                 style: {textDecoration: "none"}

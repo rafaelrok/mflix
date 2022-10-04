@@ -14,6 +14,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author rafae
+ */
 @Configuration
 @Service
 public class MongoDBConfiguration {
@@ -32,8 +35,6 @@ public class MongoDBConfiguration {
                 .applyConnectionString(connString)
                 .writeConcern(writeConcern)
                 .build();
-
-        //MongoClient mongoClient = MongoClients.create(connectionString);
 
         return MongoClients.create(mongoClientSettings);
     }
